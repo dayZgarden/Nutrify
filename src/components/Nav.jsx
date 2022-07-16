@@ -1,5 +1,4 @@
 import React from 'react'
-import './nav.css'
  
 export default function Nav() {
   return (
@@ -7,7 +6,7 @@ export default function Nav() {
         <div className="nav__content">
           <div className="nav__left">
             <img src="https://day-z-tracker.vercel.app/assets/icons8-flat-60.png" className="logo__img" />
-            <h1 className="nav__title">dayZgarden</h1>
+            <h1 className="nav__title">dayZtracker</h1>
           </div>
           <div className="nav__right">
             <a href="#about-us" className="nav__right--link link__hover-effect">Home</a>
@@ -15,7 +14,7 @@ export default function Nav() {
               >Macros</a
             >
             <button className="sign-up">
-              <a href="mailto:zyad.alkurdi22@gmail.com" className="nav__right--link colored last">Contact</a>
+              <a href="mailto:zyad.alkurdi22@gmail.com" className="nav__right--link last">Contact</a>
             </button>
           </div>
         </div>

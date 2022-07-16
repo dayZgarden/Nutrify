@@ -20,18 +20,15 @@ export default function Footer() {
               >
                 About
               </a>
-              <a href="#macros" className="footer__right--link link__hover-effect">
-                Macros
-              </a>
-              <a href="#" className="footer__right--link link__hover-effect">
+              <a href="#" className="footer__right--link reviews link__hover-effect">
                 Reviews
               </a>
             </div>
             <div className="footer__sep"></div>
             <div className="footer__bottom">
-              <h1 className="footer__bottom--title">dayZgarden</h1>
+              <h1 className="footer__bottom--title">dayZtracker</h1>
               <img
-                src=""
+                src="https://day-z-tracker.vercel.app/assets/icons8-flat-60.png"
                 className="logo__img footer__img"
               />
               <p className="copyright">

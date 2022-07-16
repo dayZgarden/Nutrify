@@ -11,7 +11,6 @@ export default function Landing() {
  
         <Home/>
  
-        <Footer/>
  
     </div>
   )
