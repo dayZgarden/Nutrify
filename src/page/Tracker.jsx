@@ -56,7 +56,7 @@ export default function Tracker() {
     }
  
     function fetchFood(context) {
-    const url = 'https://trackapi.nutritionix.com/v2/naural/nutrients';
+    const url = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
    
     let query = { 
     "query": `${context}`,
