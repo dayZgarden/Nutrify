@@ -342,3 +342,28 @@ p {
     font-size:32px;
   }
 }
+
+@media (max-width:400px) {
+  .performance-facts{
+    width:80%;
+    height:60%;
+    margin:0 auto;
+    position: initial;
+    overflow:scroll;
+  }
+  .tracker{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal{
+    height:70%;
+    padding:12px;
+    overflow: scroll;
+  }
+  .close{
+    bottom: 0;
+    right: 3px;
+    top: initial;
+  }
+}
