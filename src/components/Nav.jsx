@@ -9,7 +9,7 @@ export default function Nav() {
             <h1 className="nav__title">dayZtracker</h1>
           </div>
           <div className="nav__right">
-            <a href="#about-us" className="nav__right--link link__hover-effect">Home</a>
+            <a href="/" className="nav__right--link link__hover-effect">Home</a>
             <a href="#macros" className="nav__right--link link__hover-effect"
               >Macros</a
             >

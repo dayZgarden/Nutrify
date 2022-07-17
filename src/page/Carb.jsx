@@ -1,7 +1,14 @@
 import React from 'react'
+import '../components/Macro.css'
+import Nav from '../components/Nav'
 
 export default function Carb() {
   return (
-    <div><img src="https://www.lapbandsurgery.com/wp-content/uploads/2015/03/Carbohydrates-MyFitnessPal-Nutrition-101-Infographic-24.jpg" alt="" /></div>
+    <div className='macro__wrapper '>
+      <Nav />
+      <div className='middle__text'>
+        <h1 className='macro__title'>Under Construction</h1>
+      </div>
+    </div>
   )
 }
