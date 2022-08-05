@@ -351,6 +351,7 @@ p {
     position: initial;
     overflow:scroll;
   }
+  
   .tracker{
     height:100vh;
     display: flex;

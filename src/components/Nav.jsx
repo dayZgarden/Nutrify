@@ -5,7 +5,7 @@ export default function Nav() {
          <nav>
         <div className="nav__content">
           <div className="nav__left">
-            <img src="https://day-z-tracker.vercel.app/assets/icons8-flat-60.png" className="logo__img" />
+            <img src="https://day-ztracker.vercel.app/assets/icons8-flat-60.png" className="logo__img" />
             <h1 className="nav__title">dayZtracker</h1>
           </div>
           <div className="nav__right">

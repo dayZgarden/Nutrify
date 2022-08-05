@@ -28,7 +28,7 @@ export default function Footer() {
             <div className="footer__bottom">
               <h1 className="footer__bottom--title">dayZtracker</h1>
               <img
-                src="https://day-z-tracker.vercel.app/assets/icons8-flat-60.png"
+                src="https://day-ztracker.vercel.app/assets/icons8-flat-60.png"
                 className="logo__img footer__img"
               />
               <p className="copyright">
