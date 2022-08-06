@@ -9,9 +9,9 @@
 <h3 align="center">dayZtracker</h3>
 
   <p align="center">
-    Fullstack trivia game with 32 available genres and 3 difficulties in a multiple choice format. Features include Firebase account creation and sign in/sign out,
-    fully functionaly leaderboard that displays rank-user-points, 10 second timer for each question, shows right answer when you guess, as well as a results page 
-    displaying all the answers and your choices, as well as your score. Points save to your account when you logout. 
+    Real world esque fitness company. Includes detailed landing page with further information on nutrition. Call to action is a calorie goal and when entered 
+    the user is redirected to a nutrition label where they can add foods to their diary. The nutrition label updates instantly and displays everything to the user 
+    including their progress on their calorie goal. 
     <br />
     <a href="https://github.com/dayZgarden/dayZtracker_React"><strong>Explore the docs »</strong></a>
     <br />
@@ -71,14 +71,8 @@
 2. Install NPM packages
    ```sh
    npm install
-     npm install firebase
-     npm install heroicons/react
-     npm install axios
-     npm install firebase
-     npm install tailwindcss
-     npm install postcss
      npm install react-router dom
-     npm install tailwind-scrollbar-hide
+     npm install fortawesome/react-fontawesome
    ```
 3. Run local server
    ```js
