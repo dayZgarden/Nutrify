@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a target="_blank" href="https://day-ztracker-react.vercel.app/">
-    <img src="https://user-images.githubusercontent.com/106930540/183259674-004ad9d5-8305-4e81-b311-ef2a5421071b.png" alt="Logo" width="940" height="720">
+    <img src="https://user-images.githubusercontent.com/106930540/183259674-004ad9d5-8305-4e81-b311-ef2a5421071b.png" alt="Logo" width="1000" height="800">
   </a>
 
 <h3 align="center">dayZtracker</h3>
