@@ -52,7 +52,7 @@ export default function Home() {
               </h1>
               <h2 className="home__sub-title">
                 Acheive your <span className="colored">dream</span> physique with
-                <span className="colored"> dayZtracker</span>
+                <span className="colored"> Armor Up</span>
               </h2>
               <form
                 id="form"
@@ -93,7 +93,7 @@ export default function Home() {
                   <span className="colored"> goal.</span>
                 </h2>
                 <p className="about__para">
-                  With the use of <span className="colored"> dayZtracker</span>, we
+                  With the use of <span className="colored">Armor Up</span>, we
                   <span className="colored"> GURANTEE</span> results within a week.
                   <br />
                   <br />

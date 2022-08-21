@@ -338,7 +338,7 @@ console.log({food})
     </Link>
     {modal && <div className="logo">
         <img src="https://day-z-tracker.vercel.app/assets/icons8-flat-60.png" alt="" />
-        <h1 className="logo__title">dayZtracker</h1>
+        <h1 className="logo__title">Armor Up</h1>
     </div>}
       {!modal && <div className="percentage">
         {per? per.toFixed(0): '0'}% 
