@@ -5,9 +5,6 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Landing from './page/Landing'
 import Tracker from './page/Tracker'
-import Carb from './page/Carb'
-import Fat from './page/Fat'
-import Protein from './page/Protein'
  
 function App() {
  
@@ -17,11 +14,10 @@ function App() {
       <Router>
        
         <Routes>
-          <Route path='/' element={<Landing/>}/>
-          <Route path='/tracker' element={<Tracker props/>}/>
-          <Route path='/carb' element={<Carb/>}/>
-          <Route path='/fat' element={<Fat/>}/>
-          <Route path='/protein' element={<Protein/>}/>
+          <Route path="/" element={<NewLanding />} />
+          <Route path='/temp' element={<Landing/>}/>
+          <Route path='/tracker' element={<Tracker/>}/>
+
         </Routes>
  
       </Router>
@@ -29,5 +25,6 @@ function App() {
     </div>
   )
 }
+import NewLanding from './page/NewLanding'
  
 export default App

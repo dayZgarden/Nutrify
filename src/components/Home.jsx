@@ -43,17 +43,7 @@ export default function Home() {
             </button>
       </div> }
 
-      {!menu && <section id="home">
-        <div className="container home__container">
-          <div className="row">
-            <div className="home__contents">
-              <h1 className="home__title colored">
-                Highest rated tracker amongst bodybuilders and nutritionists
-              </h1>
-              <h2 className="home__sub-title">
-                Acheive your <span className="colored">dream</span> physique with
-                <span className="colored"> Armor Up</span>
-              </h2>
+      {!menu && 
               <form
                 id="form"
                 className="input__wrapper"
@@ -70,77 +60,7 @@ export default function Home() {
                   <FontAwesomeIcon icon={faArrowRight} className="fas fa-arrow-right"/>
                 </button>
               </form>
-              <figure className="park__wrapper">
-                <img
-                  src={park}
-                  alt=""
-                  className="home__pic"
-                />
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>}
- 
-      {!menu && <section id="about-us">
-        <div className="container">
-          <div className="row">
-            <div className="about__content">
-              <div className="about__left">
-                <h1 className="about__title">About Us</h1>
-                <h2 className="about__sub-title">
-                  We will help you <span className="colored"> reach</span> your
-                  <span className="colored"> goal.</span>
-                </h2>
-                <p className="about__para">
-                  With the use of <span className="colored">Armor Up</span>, we
-                  <span className="colored"> GURANTEE</span> results within a week.
-                  <br />
-                  <br />
-                  We will <span className="colored"> help</span> keep you on course,
-                  and provide <span className="colored"> guidance</span> throughout
-                  your journey.
-                </p>
-              </div>
-              <div className="about__right">
-                <figure className="about__img--wrapper">
-                  <img src={adventure} alt="" className="about__img" />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>}
- 
-      {!menu && <section id="macros">
-        <div className="container">
-          <div className="row">
-            <h1 className="about__title center">MACROS</h1>
-            <div className="icons">
-              <Link to={{
-                pathname: '/fat'
-              }} className="macro">
-                <FontAwesomeIcon className="fat macro__img" icon={faCheese} />
-                <div className="macro__description">Fats</div>
-              </Link>
-              <Link to={{
-                pathname: '/carb'
-              }} className="macro">
-                <FontAwesomeIcon className="carb  macro__img" icon={faBreadSlice} />
-                <div className="macro__description">Carbs</div>
-              </Link>
-              <Link to={{
-                pathname: '/protein'
-              }} className="macro">
-                <FontAwesomeIcon className="protein  macro__img" icon={faDrumstickBite} />
-                <div className="macro__description">Proteins</div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>}
-
-      {!menu && <Footer />}
+              }
     </div>
-  );
+  )
 }
