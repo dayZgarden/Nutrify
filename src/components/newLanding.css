@@ -10,6 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 html{
@@ -45,6 +46,9 @@ a{
 
 .nav__left{
 
+}
+
+.landing{
 }
 
 .nav__icon{
@@ -154,7 +158,7 @@ h1 {
     max-height: 520px;
     height: 100%;
     margin: auto 0;
-    transform: scale(1.05) translateY(18%);
+    transform: scale(1.05) translateY(22%);
 }
 
 .flower2{
@@ -203,7 +207,7 @@ h1 {
 .flipped{
     position: absolute;
     height: 300px;
-    width: 1596px;
+    min-width: 98vw
 }
 
 .extra2{
@@ -269,20 +273,21 @@ h1 {
 
 .home__bottom {
     position: absolute;
-    min-width: 1716px;
+    min-width: 98vw;
     height: 180px;
     bottom: 0;
     right: 0;
-    z-index: 2
+    z-index: 2;
+    overflow-x: hidden;
 }
 
 .home__bottom__next{
     position: absolute;
-    min-width: 1596px;
     height: 180px;
     left:-10%;
     transform: translateY(-1%);
     z-index: 2;
+    overflow-x: hidden;
 }
 
 .section__title{
@@ -387,7 +392,7 @@ h1 {
 }
 
 .two{
-    transform: translateX(34%)
+    
 }
 
 .two__para{
@@ -663,4 +668,519 @@ h1 {
 
 .three__picture{
     scale: 1
+}
+
+.burger{
+    width: 54px;
+    height: 54px;
+    color: black;
+    display: none;
+}
+
+@media (max-width: 1650px){
+    .gurantee__content{
+        transform: translateX(50%)
+    }
+}
+
+@media (max-width: 1300px){
+
+    .navbar, .home__wrapper{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .nav__button{
+        padding: 16px 24px
+    }
+
+
+
+}
+
+@media (max-width: 1200px){
+
+    .test__card{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .test__card--left{
+        padding-left: 16px
+    }
+
+    .test__card--right{
+        margin-left: 0;
+    }
+
+    .gurantee__content{
+        transform: translate(0%, 45%)
+    }
+
+    .home__bottom__next{
+        transform: translateY(-7%)
+    }
+    
+    .home__button{
+        max-width: 220px
+    }
+
+    .button__accent{
+        scale: .85;
+        bottom: -95px
+    }
+
+    .left__accent{
+        left: -20px;
+        bottom: -100px
+    }
+
+    .right__accent{
+        right: 250px;
+    }
+
+    .home__right, .flower2{
+        max-width: 480px;
+        max-height: 480px;
+        transform: translateY(30%)
+    }
+
+    .flower2 {
+        transform: translateY(10%)
+    }
+
+    .red, .red2{
+        right: 0;
+    }
+
+    .home__title{
+        width: 650px;
+        font-size: 75px;
+    }
+
+    .one__left{
+        padding: 16px;
+        
+    }
+
+    .one__right{
+        padding: 16px;
+        width: 40%
+    }
+
+    .step__wrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    .calWid{
+        right:80px;
+        top: 60px;
+    }
+}
+
+@media (max-width: 1000px){
+
+    .home__bottom__next{
+        transform: translateY(-12%)
+    }
+
+    .hero{
+         overflow: hidden;
+    }
+
+    .calWid{
+        scale: 70%;
+        top: 120px;
+        right: 50px
+    }
+
+    .home__title{
+        font-size: 68px;
+    }
+
+    .home__description{
+        font-size: 28px
+    }
+
+    .button__accent{
+        display: none;
+    }
+
+    .home__right, .flower2{
+        max-width: 400px;
+        max-height: 400px;
+        transform: translateY(58%)
+    }
+
+    .flower2{
+        transform: translateY(8%)
+    }
+
+    .extra, .extra2{
+        transform: translateY(22%)
+    }
+
+    .red, .red2{
+        transform: translateY(15%)
+    }
+
+    .yellow, .yellow2{
+        transform: translateY(35%)
+    }
+
+    .searchWid{
+        scale: 80%;
+        top: 150px;
+    }
+
+    .home__buttons{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .home__bottom{
+        bottom: -3%;
+        
+    }
+
+    .home__button{
+        max-width: 380px;
+    }
+    
+    .button__clear{
+        margin-top: 16px;
+    }
+
+    .step__title{
+        font-size:50px;
+    }
+
+    .section__title{
+        font-size: 32px;
+    }
+
+    .section__para{
+        font-size: 28px
+    }
+
+    .two, .one{
+        scale: .8
+    }
+
+    .three{
+        transform: translateX(-8%);
+        scale: .8;
+    }
+
+    .step__one{
+        height: 80vh
+    }
+
+    .gurantee__content{
+        width: 80%;
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 800px){
+
+    .home__bottom__next{
+        transform: translateY(-20%)
+    }
+
+    .home__title{
+        font-size: 60px;
+    }
+
+    .home__description{
+        font-size: 24px
+    }
+
+    .extra, .extra2{
+        transform: translateY(70%);
+        scale: .7;
+    }
+
+    .red, .red2{
+        transform: translateY(60%);
+        scale: .7;
+    }
+
+    .home__right{
+        transform: translateY(70%);
+    }
+
+    .flower2{
+        transform: translateY(18%);
+    }
+
+    .yellow, .yellow2{
+        transform: translateY(90%);
+        scale: .7;
+    }
+
+    .step__one{
+        height: 100vh
+    }
+
+    .step__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .one__left {
+        width: 80%;
+        margin-top: 100px
+    }
+
+    .step__title{
+        font-size:70px;
+    }
+
+    .section__title{
+        font-size: 40px;
+    }
+
+    .section__para{
+        font-size: 32px
+    }
+    
+    .one {
+        opacity: 80%
+    }
+
+    .one__right{
+        width: 70%;
+        margin-top: 160px;
+        margin-right: 0;
+    }
+
+    .calWid{
+        scale: 100%;
+        right: 100px;
+        top: 60px
+
+    }
+
+    .searchWid{
+        scale: 100%;
+        top:130px
+    }
+
+    .step__two{
+        margin-top:500px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .step__three{
+        margin-top:600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .diary{
+        margin-right: 0;
+        margin-top: 200px;
+    }
+
+    .testimonials{
+        margin-top: 680px;
+    }
+
+    .three__picture{
+        margin-top: 100px
+    }
+
+    .two{
+        transform: translateX(8%)
+    }
+
+    .avocado, .diary{
+        transform: translateX(7%)
+    }
+
+    .three__picture{
+        transform: translateX(4%)
+    }
+
+    .nav__middle--links, .nav__right{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .hero{
+        overflow: hidden
+    }
+
+}
+
+@media (max-width: 715px){
+    
+    .home__bottom__next{
+        transform: translateY(-30%)
+    }
+
+    .flower2{
+        transform: translateY(30%);
+    }
+
+    .extra2{
+        transform: translate(-50%, 110%);
+    }
+
+    .yellow2{
+        transform: translateY(120%);
+    }
+
+    .red2{
+        transform: translate(-60%, 100%);
+    }
+}
+
+@media (max-width: 605px){
+
+    .home__bottom__next{
+        transform: translateY(-40%)
+    }
+}
+
+
+@media (max-width: 550px){
+
+    .green__box{
+        display: none;
+    }
+
+    .connector{
+        display: none;
+    }
+
+    .box__accent{
+        scale: .65;
+        transform: translateX(-40%)
+    }
+
+    .hero{
+        overflow: hidden
+    }
+
+    .home__wrapper{
+        flex-direction: column;
+    }
+
+    .home__right{
+        max-width: 200px;
+        max-height: 200px;
+        transform: translate(90%, 20%)
+    }
+
+    .home__description, .home__buttons{
+        width: 90vw
+    }
+
+    .home__title{
+        width: 100vw;
+    }
+
+    .underline__accent{
+        width: 70vw;
+    }
+
+    .extra, .extra2{
+        display: none;
+    }
+
+    .red, .red2{
+        display: none;
+    }
+
+    .yellow, .yellow2{
+        display: none;
+    }
+    
+
+    .step__title{
+        font-size:40px;
+        line-height: 60px;
+    }
+
+    .section__title{
+        font-size: 24px;
+    }
+
+    .section__para{
+        font-size: 20px;
+    }
+
+    .one{
+        height: 50vh
+    }
+
+    .sidebar__right{
+        bottom: 48%;
+        right: -3%
+    }
+
+    .sidebar__left{
+        bottom: 52%;
+        left: -3%
+    }
+
+    .three{
+        transform: translateX(-7%)
+    }
+
+    .calWid{
+        right: 40px;
+        top: 150px;
+        scale: .7;
+    }
+
+    .searchWid {
+        top: 210px;
+        max-width: 240px;
+    }
+
+    .avocado{
+        margin-top: 60px;
+    }
+
+    .diary{
+        margin-top: 60px;
+    }
+
+    .three__picture{
+        margin-top: 40px
+    }
+
+    .step__two, .step__three{
+        margin-top: 140px;
+    }
+
+    .home__bottom{
+        bottom: -6%;
+    }
+
+}
+
+@media (max-width: 490px){
+    .home__right{
+      display: none;
+    }
+
+    .flower2{
+        scale: .9;
+        transform: translateY(40%);
+    }
 }

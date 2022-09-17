@@ -30,6 +30,8 @@ import test__picture from "../assets/test__picture.svg"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
+import { FiMenu } from "react-icons/fi";
+
 import Lottie from "lottie-web";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -98,8 +100,7 @@ export default function NewLanding() {
             animationData: yellow,
         });
     }
-    setX(x+1);
-    })
+    }, )
 
   return (
     <div className="landing">
@@ -121,6 +122,7 @@ export default function NewLanding() {
                     <div className="nav__right">
                         <button className="nav__button">Sign in</button>
                     </div>
+                    <FiMenu className="burger" />
                 </nav>
 
                 <div className="home__wrapper">
@@ -137,7 +139,7 @@ export default function NewLanding() {
                             <img src={buttonAccent} alt="" className="button__accent right__accent" />
                         </div>
                     </div>
-                    <img src={Flower} alt="" className="home__right" />
+                    <img src={Flower} alt="" className="home__right " />
                 </div>
                 <figure ref={extraRef} className="extra"></figure>
                 <figure ref={yellowRef} className="yellow"></figure>
@@ -175,7 +177,7 @@ export default function NewLanding() {
                         <img src={one} alt="" className="one" />
                         <p className="section__para step__para">Accurate nutritional informational for millions of different foods at the ease of a single button or scan.</p>
                     </div>
-                    <figure ref={avocadoRef} className="one__right">
+                    <figure ref={avocadoRef} className="one__right avocado">
                         <img src={searchWidget} alt="" className="searchWid" />
                         <img src={calWidget} alt="" className="calWid" />
                         <img src={accent} alt="" className="accent" />
@@ -187,7 +189,7 @@ export default function NewLanding() {
 
         <section className="step__one">
             <div className="row">
-                <div className="step__wrapper">
+                <div className="step__wrapper step__two">
                 <img src={diary} alt="" className="one__right diary" />
                     <div className="one__left">
                         <h3 className="section__title">Endless diary</h3>
@@ -205,7 +207,7 @@ export default function NewLanding() {
         
         <section className="step__one">
             <div className="row">
-                <div className="step__wrapper">
+                <div className="step__wrapper step__three">
                     <div className="one__left">
                         <h3 className="section__title">Driven growth</h3>
                         <h2 className="step__title">
