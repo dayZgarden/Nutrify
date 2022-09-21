@@ -27,29 +27,40 @@ a{
     width: 100%;
 }
 
+.container{
+    padding: 96px;
+}
+
+
+
+.hero__container{
+    padding: 96px;
+    padding-top: 0px;
+}
+
 .hero{
     background-color: white;
-    height: 100vh;
     width: 100%;
+    height: calc(100vh - 144px);
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .navbar{
     display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .nav__left{
 
 }
 
-.landing{
-}
 
 .nav__icon{
     color: black;
@@ -273,8 +284,8 @@ h1 {
 
 .home__bottom {
     position: absolute;
-    min-width: 98vw;
-    height: 180px;
+    width: 100vw;
+    height: 10vh;
     bottom: 0;
     right: 0;
     z-index: 2;
@@ -349,7 +360,6 @@ h1 {
 
 
 .step__one{
-    height: 100vh;
     margin-top: 50px;
     position: relative;
 }
@@ -510,7 +520,12 @@ h1 {
     position: relative;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     justify-content: center;
-    margin-top: 60px;
+}
+
+.clear__dot{
+    background-color: white !important;
+    border-radius: 9999px;
+    border: 2px solid black;
 }
 
 .test__card--left{
@@ -644,12 +659,14 @@ h1 {
 }
 
 .footer{
-    height: 60vh;
     position: relative;
+    margin-top: 96px
 }
 
-.footerbar{
-    transform: translateY(300%)
+.footer__container{
+    padding: 96px;
+    padding-bottom: 0;
+    background-color: transparent;
 }
 
 .bottombg {

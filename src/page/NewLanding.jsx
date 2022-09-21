@@ -105,8 +105,6 @@ export default function NewLanding() {
   return (
     <div className="landing">
 
-        <section className="hero">
-            <div className="row">
                 <nav className="navbar">
                     <div className="nav__left">
                         <a href="/" className="nav__icon">Nutrify</a>
@@ -125,6 +123,9 @@ export default function NewLanding() {
                     <FiMenu className="burger" />
                 </nav>
 
+        <section className="hero">
+            <div className="hero__container">
+            <div className="row">
                 <div className="home__wrapper">
                     <div className="home__left">
                         <div>
@@ -144,6 +145,7 @@ export default function NewLanding() {
                 <figure ref={extraRef} className="extra"></figure>
                 <figure ref={yellowRef} className="yellow"></figure>
                 <figure ref={redRef} className="red"></figure>
+                </div>
             </div>
             
 
@@ -160,13 +162,16 @@ export default function NewLanding() {
         </div>
 
         <section className="gurantee">
-            <div className="gurantee__content">
-                <h3 className="section__title">Nutrify Gurantee</h3>
-                <p className="section__para">Acheive your dream physique and see progress like you never have before. We’ll help you every step of the way to get there.</p>
+            <div className="container">
+                <div className="gurantee__content">
+                    <h3 className="section__title">Nutrify Gurantee</h3>
+                    <p className="section__para">Acheive your dream physique and see progress like you never have before. We’ll help you every step of the way to get there.</p>
+                </div>
             </div>
         </section>
 
         <section className="step__one">
+            <div className="container">
             <div className="row">
                 <div className="step__wrapper">
                     <div className="one__left">
@@ -184,10 +189,12 @@ export default function NewLanding() {
                     </figure>
                 </div>
             </div>
+            </div>
                 <img src={sidebar} alt="" className="sidebar sidebar__right" />
         </section>
 
         <section className="step__one">
+            <div className="container">
             <div className="row">
                 <div className="step__wrapper step__two">
                 <img src={diary} alt="" className="one__right diary" />
@@ -202,10 +209,13 @@ export default function NewLanding() {
                     
                 </div>
             </div>
+            </div>
                 <img src={sidebar} alt="" className="sidebar sidebar__left" />
         </section>
         
         <section className="step__one">
+            <div className="container">
+
             <div className="row">
                 <div className="step__wrapper step__three">
                     <div className="one__left">
@@ -219,17 +229,17 @@ export default function NewLanding() {
                     <img src={threepicture} alt="" className="one__right three__picture" />
                 </div>
             </div>
+            </div>
+
                 <img src={sidebar} alt="" className="sidebar sidebar__right" />
         </section>
         
         <section className="testimonials">
-            <img src={testBar} alt="" className="testBar testBar1" />
-            <img src={testBar} alt="" className="testBar testBar2" />
+            <div className="container">
             <div className="row">
                 <div className="testimonials__wrapper">
                     <h3 className="section__title test__section--title">You're not alone</h3>
                     <h2 className="step__title test__title">See what others have to say</h2>
-                    <div className="box__accent"></div> 
                     <div className="test__card">
                         <div className="test__card--left">
                             <p className="section__para test__para">Whether it be your calories, weight, protein, or carbs, you’ll find what you need.</p>
@@ -252,16 +262,18 @@ export default function NewLanding() {
                         </div>
                         <span className="dots">
                             <span className="dot"></span>
-                            <span className="dot"></span>
+                            <span className="dot clear__dot"></span>
                             <span className="dot"></span>
                             <span className="dot"></span>
                         </span>
                     </div>
                 </div>
             </div>
+            </div>
         </section>
 
         <footer className="footer">
+            <div className="footer__container">
             <div className="row">
                 <div className="footerbar">
                     <nav className="navbar">
@@ -279,6 +291,7 @@ export default function NewLanding() {
                             </div>
                         </nav>
                 </div>
+            </div>
             </div>
             <span className="bottombg"></span>
         </footer>
