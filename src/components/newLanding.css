@@ -31,7 +31,11 @@ a{
     padding: 96px;
 }
 
-
+.nav__container{
+    padding: 96px;
+    padding-bottom: 0px;
+    padding-top: 32px;
+}
 
 .hero__container{
     padding: 96px;
@@ -49,10 +53,12 @@ a{
 }
 
 .navbar{
-    display: flex;
-    max-width: 1300px;
-    margin: 0 auto;
     width: 100%;
+
+}
+
+.nav__wrapper{
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -64,14 +70,14 @@ a{
 
 .nav__icon{
     color: black;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: bold;
     font-family: 'Amaranth', sans-serif;
 }
 
 .nav__middle{
     max-width: 425px;
-    width: 100%;
+    width: 100%
 }
 
 .nav__middle--links{
@@ -81,7 +87,7 @@ a{
 
 .nav__link{
     color: black;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Amaranth', sans-serif;
 }
 
@@ -91,7 +97,7 @@ a{
     border-radius: 5px;
     padding: 16px 36px;
     color: white;
-    font-size: 32px;
+    font-size: 2rem;
     font-family: 'Amaranth', sans-serif;
 }
 
@@ -103,25 +109,25 @@ a{
 .home__left{
     display: flex;
     flex-direction: column;
+    width: 60%
 }
 
 h1 {
 }
 
 .home__title{
-    font-size: 90px;
+    font-size: 5rem;
     font-weight: bold;
     color: black;
     line-height: 100.7%;
     font-family: 'Amaranth', sans-serif;
-    width: 742px;
     text-align: left;
     margin: 0;
     margin-top: 10px
 }
 
 .home__description{
-    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 113.2%;
     font-family: 'Alata', sans-serif;
     max-width: 573px;
@@ -144,7 +150,7 @@ h1 {
     width: 100%;
     font-family: 'Amaranth', sans-serif;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     z-index: 50;
     cursor: pointer;
 }
@@ -164,6 +170,10 @@ h1 {
 }
 
 .home__right{
+    width: 45%;
+}
+
+.hero__flower{
     max-width: 500px;
     width: 100%;
     max-height: 520px;
@@ -285,7 +295,7 @@ h1 {
 .home__bottom {
     position: absolute;
     width: 100vw;
-    height: 10vh;
+    height: 15vh;
     bottom: 0;
     right: 0;
     z-index: 2;
@@ -302,7 +312,7 @@ h1 {
 }
 
 .section__title{
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: bold;
     font-family: 'Amaranth', sans-serif;
     color: #16168f;
@@ -336,7 +346,7 @@ h1 {
 
 .step__title{
     margin-top: 8px;
-    font-size: 70px;
+    font-size: 4.375rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 0.025em;
     line-height: 85px;
@@ -539,7 +549,7 @@ h1 {
 
 .test__para{
     text-align: left;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .green__box{
@@ -570,12 +580,12 @@ h1 {
 }
 
 .test__name{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Alata', sans-serif;
 }
 
 .test__name__title{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: 'Alata', sans-serif;
 }
 
@@ -660,11 +670,11 @@ h1 {
 
 .footer{
     position: relative;
-    margin-top: 96px
+    margin-top: 6rem
 }
 
 .footer__container{
-    padding: 96px;
+    padding: 6rem;
     padding-bottom: 0;
     background-color: transparent;
 }
@@ -756,7 +766,7 @@ h1 {
         right: 250px;
     }
 
-    .home__right, .flower2{
+    .hero__flower, .flower2{
         max-width: 480px;
         max-height: 480px;
         transform: translateY(30%)
@@ -771,8 +781,7 @@ h1 {
     }
 
     .home__title{
-        width: 650px;
-        font-size: 75px;
+        font-size: 4.688rem;
     }
 
     .one__left{
@@ -813,18 +822,18 @@ h1 {
     }
 
     .home__title{
-        font-size: 68px;
+        font-size: 4.25rem;
     }
 
     .home__description{
-        font-size: 28px
+        font-size: 1.75rem;
     }
 
     .button__accent{
         display: none;
     }
 
-    .home__right, .flower2{
+    .hero__flower, .flower2{
         max-width: 400px;
         max-height: 400px;
         transform: translateY(58%)
@@ -870,15 +879,15 @@ h1 {
     }
 
     .step__title{
-        font-size:50px;
+        font-size:3.125rem;
     }
 
     .section__title{
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .section__para{
-        font-size: 28px
+        font-size: 1.75rem
     }
 
     .two, .one{
@@ -907,11 +916,11 @@ h1 {
     }
 
     .home__title{
-        font-size: 60px;
+        font-size: 3.75rem;
     }
 
     .home__description{
-        font-size: 24px
+        font-size: 1.5rem;
     }
 
     .extra, .extra2{
@@ -924,7 +933,7 @@ h1 {
         scale: .7;
     }
 
-    .home__right{
+    .hero__flower{
         transform: translateY(70%);
     }
 
@@ -954,15 +963,15 @@ h1 {
     }
 
     .step__title{
-        font-size:70px;
+        font-size:4.375rem;
     }
 
     .section__title{
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     .section__para{
-        font-size: 32px
+        font-size: 2rem
     }
     
     .one {
@@ -1096,7 +1105,7 @@ h1 {
         flex-direction: column;
     }
 
-    .home__right{
+    .hero__flower{
         max-width: 200px;
         max-height: 200px;
         transform: translate(90%, 20%)
@@ -1128,16 +1137,16 @@ h1 {
     
 
     .step__title{
-        font-size:40px;
+        font-size:2.5rem;
         line-height: 60px;
     }
 
     .section__title{
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .section__para{
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .one{
@@ -1192,7 +1201,7 @@ h1 {
 }
 
 @media (max-width: 490px){
-    .home__right{
+    .hero__flower{
       display: none;
     }
 
