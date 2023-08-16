@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Nav from './components/Nav'
-import Footer from './components/Footer'
 import Landing from './page/Landing'
 import Tracker from './page/Tracker'
+import Error from './page/Error'
+
  
 function App() {
  
@@ -15,9 +15,9 @@ function App() {
        
         <Routes>
           <Route path="/" element={<NewLanding />} />
-          <Route path='/temp' element={<Landing/>}/>
+          <Route path='/home' element={<Landing/>}/>
           <Route path='/tracker' element={<Tracker/>}/>
-
+          <Route path='*' element={<Error/>}/>
         </Routes>
  
       </Router>

@@ -1,5 +1,5 @@
 import React, {Component, useRef, useState, useEffect} from "react";
-import './Home.css'
+// import './Home.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDrumstickBite, faCheese, faBreadSlice, faArrowRight, faBars  } from '@fortawesome/free-solid-svg-icons'

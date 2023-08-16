@@ -40,9 +40,6 @@ p {
   transition: all 400ms ease;
 }
 
-.performance-facts:hover{
-    transform: scale(1.05);
-}
 
 .performance-facts table {
   border-collapse: collapse;
@@ -268,9 +265,6 @@ p {
     flex-direction: column;
 }
 
-.modal:hover, .modal:focus, .modal:active{
-    transform: scale(1.07);
-}
 
 ::placeholder, #serving-size{
     color:black;

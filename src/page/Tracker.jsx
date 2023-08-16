@@ -3,6 +3,8 @@ import '../components/NutritionLabel.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faPlus, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { Link, useLocation } from "react-router-dom";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
  
 export default function Tracker() {
 
@@ -122,8 +124,15 @@ console.log({food})
     }, [calories, fat])
  
   return (
-    <div className="tracker">
-      {!modal && <div className="body"><section className="performance-facts">
+    <>
+    <Nav />
+    <div className="overflow-hidden  py-8 sm:py-12">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto  grid max-w-2xl grid-cols-1 relative gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        {!modal && <div className="bg-white absolute top-0 right-0 p-4 rounded-full font-extrabold text-[1.2rem] ">
+        {per? per.toFixed(0): '0'}% 
+      </div>}
+      {!modal && <div className="flex-col flex "><section className="m-0 translate-x-[-10%] scale-[.8] performance-facts">
       <header className="performance-facts__header">
         <h1 className="performance-facts__title">Nutrition Facts</h1>
         <p className="calorie__goal">Your Calorie Goal: {goal? goal : '0'}</p>
@@ -326,46 +335,36 @@ console.log({food})
       </p>
     </section>
 
-    <div className="foods">
-      <p className="foods__listed">Foods: {foods}</p>
-    </div>
+      {!modal && <button className="z-[1] hover:bg-indigo-500 transition-all duration-300 -mt-4 relative px-3 py-2 text-lg bg-[#308a7b] text-white rounded-md max-w-[30%]" onClick={toggleModal}>
+        Add Food
+      </button>}
 
     </div> }
-    <Link to={{
-      pathname: '/'
-    }} className="home__arrow">
-      <FontAwesomeIcon icon={faHome} className='fa-left'/>
-    </Link>
-    {modal && <div className="logo">
-        <img src="https://day-z-tracker.vercel.app/assets/icons8-flat-60.png" alt="" />
-        <h1 className="logo__title">Armor Up</h1>
-    </div>}
-      {!modal && <div className="percentage">
-        {per? per.toFixed(0): '0'}% 
-      </div>}
-      {!modal && <button className="plus" onClick={toggleModal}>
-        <FontAwesomeIcon icon={faPlus} className='fa-plus' />
-      </button>}
+
+    </div>
         {
         modal &&
-         <div className="modal">
+         <div className="modal bg-white shadow-2xl w-full">
          
           <form className="modal__form" onSubmit={userFood}>
-            <h1 className="modal__title">Add Food to Your Diary</h1>
-            <input type="text" placeholder="Any Food" id="food" required/>
-            <select id="serving-size" required>
+            <h1 className="modal__title tracking-none font-semibold text-2xl">Add Food to Your Diary</h1>
+            <input className="border-2 border-black" type="text" placeholder="Any Food" id="food" required/>
+            <select className="border-2 border-black" id="serving-size" required>
                 <option selected='true' disabled value="serving">Serving Size</option>
                 <option value="g">grams</option>
                 <option value="wt-oz">ounces</option>
                 <option value="cup">cups</option>
             </select>
             <input type="number" placeholder="Quantity" id="quantity"  required />
-            <button className="submit">Submit</button>
+            <button className="z-[1] hover:bg-indigo-500 transition-all duration-300 relative px-6 py-4 text-lg bg-[#308a7b] text-white rounded-md">Submit</button>
             <button onClick={toggleModal} className='close'><FontAwesomeIcon icon={faTimes} className='fa-times' /></button>
           </form>
         </div>
         }
     </div>
+    /</div>
+    <Footer />
+    </>
   );
 }
  
