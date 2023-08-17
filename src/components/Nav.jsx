@@ -6,7 +6,7 @@ import { FiMenu } from "react-icons/fi";
 const Nav = () => {
   return (
     <>
-      <nav className="navbar p-6 border-b border-gray-200">
+      <nav className="navbar font-Amaranth p-6 border-b border-gray-200">
         <div className="max-w-7xl px-6 lg:px-8 mx-auto flex justify-between items-center">
           <a href="/" className="text-2xl font-semibold text-[#308a7b]">
             Nutrify
