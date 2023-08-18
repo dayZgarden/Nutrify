@@ -27,6 +27,8 @@ export default function Tracker() {
   const [cholesterol, setCholesterol] = useState(0);
   const [sodium, setSodium] = useState(0);
   const [fatCalories, setFatCalories] = useState(0);
+  const [quantities, setQuantities] = useState([]);
+  const [servingSizes, setServingSizes] = useState([]);
 
   // DV States
   const [proteinDV, setProteinDV] = useState(0);
@@ -50,6 +52,8 @@ export default function Tracker() {
     let food = document.getElementById("food").value;
     let serving = document.getElementById("serving-size").value;
     setModal(!modal);
+    setServingSizes([...servingSizes, serving]);
+    setQuantities([...quantities, quantity]);
     let context = `${quantity} ${serving} of ${food}`;
     fetchFood(context);
   }
@@ -94,14 +98,14 @@ export default function Tracker() {
       setFiber(e.nf_dietary_fiber + fiber);
       setCholesterol(e.nf_cholesterol + cholesterol);
       setSodium(e.nf_sodium + sodium);
-      setBackgroundImage(e.photo.thumb)
+      setBackgroundImage(e.photo.thumb);
     });
-    setFoods(prevFoods => [...prevFoods, food]);
-    console.log(foods)
+    setFoods([...foods, ...food]);
+    console.log(foods);
   }, [food]);
 
   useEffect(() => {
-    let cal = (calories / goal) * 100;
+    let cal = (calories / newGoal) * 100;
     setPer(cal);
 
     let fatCal = 9 * fat;
@@ -118,18 +122,42 @@ export default function Tracker() {
     setSodiumDV((sodium / 2300) * 100);
   }, [calories, fat]);
 
+  const handleEdit = () => {
+    setCurrentFood(food); // set the current food to edit (assuming you have a state variable 'currentFood')
+  };
+
+  const [editModal, setEditModal] = useState(false);
+
+  const handleDelete = (foodId) => {
+    const updatedFoods = foods.filter((f) => f.id !== foodId);
+    setFoods(updatedFoods);
+  };
+
+  const [newGoal, setGoal] = useState(goal);
+  console.log(newGoal);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setGoal(newGoal);
+    setEditModal(!editModal);
+  };
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <>
       <Nav />
       <div className="overflow-hidden  py-8 sm:py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto  grid max-w-2xl grid-cols-1 relative gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div className="mx-auto flex justify-between">
             {!modal && (
               <div className="bg-white absolute top-0 right-0 p-4 rounded-full font-extrabold text-[1.2rem] ">
                 {per ? per.toFixed(0) : "0"}%
               </div>
             )}
-            {!modal && (
+            {!modal && !editModal && (
               <div className="flex-col flex ">
                 <section className="m-0 translate-x-[-10%] scale-[.8] performance-facts">
                   <header className="performance-facts__header">
@@ -137,7 +165,7 @@ export default function Tracker() {
                       Nutrition Facts
                     </h1>
                     <p className="calorie__goal">
-                      Your Calorie Goal: {goal ? goal : "0"}
+                      Your Calorie Goal: {newGoal ? newGoal : "0"}
                     </p>
                   </header>
                   <table className="performance-facts__table">
@@ -322,35 +350,134 @@ export default function Tracker() {
                 </section>
 
                 {!modal && (
-                  <button
-                    className="z-[1] hover:bg-indigo-500 transition-all duration-300 -mt-4 relative px-3 py-2 text-lg bg-[#308a7b] text-white rounded-md max-w-[30%]"
-                    onClick={toggleModal}
-                  >
-                    Add Food
-                  </button>
+                  <div className="flex space-x-2">
+                    <button
+                      className="z-[1] hover:bg-indigo-500 transition-all duration-300 -mt-4 relative px-3 py-2 text-lg bg-[#308a7b] text-white rounded-md max-w-[30%]"
+                      onClick={toggleModal}
+                    >
+                      Add Food
+                    </button>
+                    <button
+                      className="z-[1] hover:bg-indigo-500 transition-all duration-300 -mt-4 relative px-3 py-2 text-lg bg-[#308a7b] text-white rounded-md max-w-[30%]"
+                      onClick={() => setEditModal(!editModal)}
+                    >
+                      Edit Goal
+                    </button>
+                  </div>
                 )}
               </div>
             )}
 
-            <div className="flex-col flex">
-              <div className="flex flex-col">
-                <h1 className="text-2xl font-bold">Your Food Diary</h1>
-                <p className="text-sm">
-                  Here you can see all the food you've added to your diary.
-                </p>
-                <div className="flex flex-wrap">
-                  {foods?.map(({f}) => (
-                    <div className="card w-[25%]">
-                      <div className="card__content">
-                        <p className="card__text">{f?.food_name}</p>
-                        <img className="" src={f?.photo?.thumb} alt="" />
+            {!editModal && !modal && (
+              <div className="flex-col flex">
+                <div className="flex flex-col">
+                  <h1 className="text-2xl font-bold w-full text-center text-[1.75rem] fond-bold">
+                    Your Food Diary
+                  </h1>
+                  <p className="text-sm w-full mt-4 text-center text-[1.25rem]">
+                    Here you can see all the food you've added to your diary.
+                  </p>
+                  <div className="flex flex-wrap mt-12">
+                    {foods?.map((f, index) => (
+                      <div className="card flex p-6 flex-col items-center ml-0 m-4 cursor-pointer relative w-[30%] group rounded-lg border-4 border-black ">
+                        <div className="card__content group-hover:blur-md group-hover:opacity-70 transition-all duration-300">
+                          <p className="card__text text-xl text-center font-bold ">
+                            {f?.food_name
+                              ? capitalizeFirstLetter(f.food_name)
+                              : ""}
+                          </p>
+
+                          <img
+                            className="scale-75  invert-0 border-4 rounded-full aspect-square border-black object-center object-cover"
+                            src={f?.photo?.highres}
+                            alt=""
+                          />
+                          <div className="">
+                            <h1 className="border-black border-b-2 font-semibold text-lg">
+                              Calories: {f?.nf_calories}
+                            </h1>
+                            <h1 className="border-black border-b-2 font-semibold text-lg">
+                              Percentage:{" "}
+                              {((f?.nf_calories / newGoal) * 100).toFixed(2)}%
+                            </h1>
+                            <h1 className="border-black border-b-2 font-semibold text-lg">
+                              Protein: {f?.nf_protein}
+                            </h1>
+                            <h1 className="border-black border-b-2 font-semibold text-lg">
+                              Carbs: {f?.nf_total_carbohydrate}
+                            </h1>
+                            <h1 className="border-black border-b-2 font-semibold text-lg">
+                              Fat: {f?.nf_total_fat}
+                            </h1>
+                            <h1 className="border-black border-b-2 font-semibold text-lg">
+                              Serving Size: {servingSizes[0]}
+                            </h1>
+                            <h1 className="border-black border-b-2 font-semibold text-lg">
+                              Serving Qty: {quantities[0]}
+                            </h1>
+                          </div>
+                        </div>
+                        <div className="absolute flex flex-col items-center space-y-4 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <button
+                            onClick={() => handleEdit(f)}
+                            className="z-[1] hover:bg-indigo-500 transition-all duration-300 relative px-3 py-2 text-lg bg-[#308a7b] text-white rounded-md"
+                          >
+                            Edit
+                          </button>
+                          <button
+                            onClick={() => handleDelete(f.id)}
+                            className="z-[1] hover:bg-indigo-500 transition-all duration-300 relative px-3 py-2 text-lg bg-[#308a7b] text-white rounded-md"
+                          >
+                            Delete
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
+
+          {editModal && (
+            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+              <form
+                className="space-y-6"
+                id="form"
+                onSubmit={handleSubmit}
+                action="#"
+                method="POST"
+              >
+                <div>
+                  <label className="block text-sm font-medium leading-6 text-gray-900">
+                    Input a Calorie Goal
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      type="number"
+                      placeholder="Calorie goal"
+                      onChange={(e) => setGoal(e.target.value)}
+                      required
+                      className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex items-center justify-between"></div>
+                </div>
+
+                <div>
+                  <button
+                    type="submit"
+                    className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Set New Calorie Goal
+                  </button>
+                </div>
+              </form>
+            </div>
+          )}
 
           {modal && (
             <div className="modal text-black bg-white shadow-2xl w-full">

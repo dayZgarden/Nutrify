@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         'Amaranth': ['Amaranth', 'sans-serif'],
         'Alata': ['Alata', 'sans-serif'],
+      },
+      boxShadow: {
+        'black' : '3px 4px 0px 0px rgba(0, 0, 0, 0.6)',
       }
     },
 
