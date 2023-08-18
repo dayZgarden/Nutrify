@@ -1,6 +1,5 @@
 import React, {  useRef, useState, useEffect } from "react";
 import {  useNavigate } from "react-router-dom";
-import flower from "../assets/flower.svg";
 
 export default function Home() {
   let navigate = useNavigate();
