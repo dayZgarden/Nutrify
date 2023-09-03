@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a target="_blank" href="https://day-ztracker-react.vercel.app/">
-    <img src="[https://user-images.githubusercontent.com/106930540/183259674-004ad9d5-8305-4e81-b311-ef2a5421071b.png](https://cdn.discordapp.com/attachments/880274195093811313/1147905718079455264/image.png)" alt="Logo" width="1000" height="800">
+    <img src="https://cdn.discordapp.com/attachments/880274195093811313/1147905718079455264/image.png" alt="Logo" width="1000" height="800">
     
   </a>
 
@@ -100,7 +100,6 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
 
 * [![linkedin][linkedin]][linkedin-url]
-* [![twitter][twitter]][twitter-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,7 +136,5 @@ Don't forget to give the project a star! Thanks again!
 [html5-url]: https://developer.mozilla.org/en-US/docs/Glossary/HTML5
 [JavaScript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
 [JavaScript-url]: https://www.javascript.com/
-[twitter]: https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white
-[twitter-url]: https://twitter.com/zdaisygarden
 [linkedin]: https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: www.linkedin.com/in/zyadalkurdi
