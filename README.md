@@ -3,15 +3,16 @@
 <br />
 <div align="center">
   <a target="_blank" href="https://day-ztracker-react.vercel.app/">
-    <img src="https://user-images.githubusercontent.com/106930540/183259674-004ad9d5-8305-4e81-b311-ef2a5421071b.png" alt="Logo" width="1000" height="800">
+    <img src="[https://user-images.githubusercontent.com/106930540/183259674-004ad9d5-8305-4e81-b311-ef2a5421071b.png](https://cdn.discordapp.com/attachments/880274195093811313/1147905718079455264/image.png)" alt="Logo" width="1000" height="800">
+    
   </a>
 
 <h3 align="center">dayZtracker</h3>
 
   <p align="center">
-    Real world esque fitness company. Includes detailed landing page with further information on nutrition. Call to action is a calorie goal and when entered 
-    the user is redirected to a nutrition label where they can add foods to their diary. The nutrition label updates instantly and displays everything to the user 
-    including their progress on their calorie goal. 
+    Developed an application with the idea of a nutrition application that features a nutrition label for the user. 
+    The application utilizes the largest nutrition database to output accurate information on all the foods they input. 
+    The nutrition label mimics that of a real one, and is dynamically updated every time the user inputs more food.
     <br />
     <a href="https://github.com/dayZgarden/dayZtracker_React"><strong>Explore the docs »</strong></a>
     <br />
