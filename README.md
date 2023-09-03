@@ -1,4 +1,4 @@
-# dayZtracker
+# Nutrify
 
 <br />
 <div align="center">
