@@ -7,7 +7,7 @@
     
   </a>
 
-<h3 align="center">dayZtracker</h3>
+<h3 align="center">Nutrify</h3>
 
   <p align="center">
     Developed an application with the idea of a nutrition application that features a nutrition label for the user. 
